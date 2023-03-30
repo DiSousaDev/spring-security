@@ -1,7 +1,7 @@
 package br.dev.diego.springsecurity.services;
 
-import br.dev.diego.springsecurity.records.ProductDetail;
-import br.dev.diego.springsecurity.records.ProductInsert;
+import br.dev.diego.springsecurity.records.product.ProductDetail;
+import br.dev.diego.springsecurity.records.product.ProductInsert;
 
 import java.util.List;
 

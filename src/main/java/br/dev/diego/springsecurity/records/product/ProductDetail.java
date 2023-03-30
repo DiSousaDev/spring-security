@@ -1,4 +1,4 @@
-package br.dev.diego.springsecurity.records;
+package br.dev.diego.springsecurity.records.product;
 
 import br.dev.diego.springsecurity.entities.Product;
 

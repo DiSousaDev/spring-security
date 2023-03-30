@@ -1,0 +1,2 @@
+insert into tb_users (login, password, role) VALUES ('diego', '$2a$10$Yv6/lJjV.EhY9yf6YLYKp.sxKgdrFo2hV6rhB2vPVFHZI8fB5wlqW', 'ROLE_ADMIN');
+insert into tb_users (login, password, role) VALUES ('maria', '$2a$10$Yv6/lJjV.EhY9yf6YLYKp.sxKgdrFo2hV6rhB2vPVFHZI8fB5wlqW', 'ROLE_USER');

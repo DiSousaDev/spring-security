@@ -1,7 +1,7 @@
 package br.dev.diego.springsecurity.controllers;
 
-import br.dev.diego.springsecurity.records.ProductDetail;
-import br.dev.diego.springsecurity.records.ProductInsert;
+import br.dev.diego.springsecurity.records.product.ProductDetail;
+import br.dev.diego.springsecurity.records.product.ProductInsert;
 import br.dev.diego.springsecurity.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

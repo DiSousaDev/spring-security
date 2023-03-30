@@ -1,4 +1,4 @@
-package br.dev.diego.springsecurity.records;
+package br.dev.diego.springsecurity.records.product;
 
 public record ProductInsert(
         String name,

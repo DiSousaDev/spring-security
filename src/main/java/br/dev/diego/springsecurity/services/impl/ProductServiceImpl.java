@@ -1,8 +1,8 @@
 package br.dev.diego.springsecurity.services.impl;
 
 import br.dev.diego.springsecurity.entities.Product;
-import br.dev.diego.springsecurity.records.ProductDetail;
-import br.dev.diego.springsecurity.records.ProductInsert;
+import br.dev.diego.springsecurity.records.product.ProductDetail;
+import br.dev.diego.springsecurity.records.product.ProductInsert;
 import br.dev.diego.springsecurity.repositories.ProductRepository;
 import br.dev.diego.springsecurity.services.ProductService;
 import br.dev.diego.springsecurity.services.exceptions.EntityNotFoundException;

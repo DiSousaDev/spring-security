@@ -1,6 +1,6 @@
 package br.dev.diego.springsecurity.entities;
 
-import br.dev.diego.springsecurity.records.ProductInsert;
+import br.dev.diego.springsecurity.records.product.ProductInsert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double price;
