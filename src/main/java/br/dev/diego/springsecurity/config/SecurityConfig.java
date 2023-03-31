@@ -12,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.util.Arrays;
 
@@ -20,9 +21,11 @@ import java.util.Arrays;
 public class SecurityConfig {
 
     private final Environment env;
+    private final SecurityFilter securityFilter;
 
-    public SecurityConfig(Environment env) {
+    public SecurityConfig(Environment env, SecurityFilter securityFilter) {
         this.env = env;
+        this.securityFilter = securityFilter;
     }
 
     @Bean
@@ -36,11 +39,11 @@ public class SecurityConfig {
                 .csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().authorizeHttpRequests()
-                .requestMatchers( HttpMethod.GET, "/home").permitAll()
+                .requestMatchers(HttpMethod.GET, "/home").permitAll()
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
                 .requestMatchers("/h2-console/**").permitAll()
                 .anyRequest().authenticated()
-                .and()
+                .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 

@@ -7,4 +7,5 @@ public interface TokenService {
 
     TokenInfo gerarToken(User user);
 
+    String getSubject(String token);
 }
