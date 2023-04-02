@@ -48,6 +48,7 @@ public class SecurityConfig {
                 .and().authorizeHttpRequests(
                         auth -> {
                             auth.requestMatchers(HttpMethod.GET, "/home").permitAll();
+                            auth.requestMatchers(HttpMethod.GET, "/products").permitAll();
                             auth.requestMatchers(HttpMethod.POST, "/login").permitAll();
                             auth.requestMatchers(HttpMethod.POST, "/products").hasRole(ADMIN.toString());
                             auth.requestMatchers(toH2Console()).permitAll();
