@@ -23,6 +23,8 @@ public class TokenServiceImpl implements TokenService {
     private String secret;
     @Value("${security.token.issuer}")
     private String issuer;
+    @Value("${security.token.expiration-minutes}")
+    private long expirationMinutes;
 
     public TokenServiceImpl() {
         // Springboot need this
@@ -58,7 +60,7 @@ public class TokenServiceImpl implements TokenService {
     }
 
     private Instant getExpirationTime() {
-        return LocalDateTime.now().plusSeconds(30).toInstant(ZoneOffset.of("-03:00"));
+        return LocalDateTime.now().plusMinutes(expirationMinutes).toInstant(ZoneOffset.of("-03:00"));
     }
 
 }
