@@ -1,4 +1,4 @@
-package br.dev.diego.springsecurity.services.impl;
+package br.dev.diego.springsecurity.services.impl.auth;
 
 import br.dev.diego.springsecurity.entities.User;
 import br.dev.diego.springsecurity.records.login.TokenInfo;

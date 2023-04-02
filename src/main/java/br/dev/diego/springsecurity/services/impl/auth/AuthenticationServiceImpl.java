@@ -1,4 +1,4 @@
-package br.dev.diego.springsecurity.services.impl;
+package br.dev.diego.springsecurity.services.impl.auth;
 
 import br.dev.diego.springsecurity.repositories.UserRepository;
 import br.dev.diego.springsecurity.services.exceptions.EntityNotFoundException;
